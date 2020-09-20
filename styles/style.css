@@ -1,0 +1,48 @@
+:root {
+    --pokemon-color: grey;
+  }
+
+body {
+    background-color: rgb(99, 189, 174);
+    font-family: lato;
+}
+
+h1{
+    text-align: center;
+}
+
+.card {
+    list-style-type: none;
+    background-color: rgb(128,128,128,0.5);
+    text-align: center;
+}
+
+.card-title{
+    text-transform: capitalize;
+}
+
+.card:hover{
+    animation: darken 0.4s linear;
+    cursor: pointer;
+    animation-fill-mode: forwards;
+}
+
+@keyframes darken{
+    0%{
+        background-color-opac: rgb(128,128,128,0.5);
+    }
+    50%{
+        background-color: rgb(128,128,128,0.75);
+    }
+    100%{
+        background-color: rgb(128,128,128,1);
+    }
+}
+
+#pokedex{
+    padding-inline-start: 0;
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
+}
